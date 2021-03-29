@@ -1,0 +1,17 @@
+@import "./variables";
+
+
+.menu{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    border-style: double;
+    border-width: 10px;
+    background-color: $menuColor;
+    width:10em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}

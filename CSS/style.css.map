@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "ACGA,AAAA,KAAK,CAAA;EACD,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;EACT,SAAS,EAAE,qBAAqB;EAChC,aAAa,EAAE,IAAI;EACnB,YAAY,EAAE,MAAM;EACpB,YAAY,EAAE,IAAI;EAClB,gBAAgB,ECXR,OAAiB;EDYzB,KAAK,EAAC,IAAI;EACV,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,MAAM;CACtB;;ADZD,AAAA,IAAI,CAAA;EACA,gBAAgB,EAAE,IAAI;CACzB",
+    "sources": [
+        "style.scss",
+        "sass/_menu.scss",
+        "sass/_variables.scss",
+        "sass/_variables.scss",
+        "sass/_play.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
