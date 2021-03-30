@@ -21,6 +21,31 @@
           align-items: center;
 }
 
+#start {
+  text-decoration: none;
+  color: black;
+}
+
+#start a:link, #start a:visited {
+  color: black;
+}
+
+#highscore {
+  color: black;
+}
+
+#highscore :hover {
+  cursor: pointer;
+}
+
+#quit {
+  color: black;
+}
+
+#quit :hover {
+  cursor: pointer;
+}
+
 #scoreBox {
   position: fixed;
   top: 50%;
@@ -44,6 +69,10 @@
   width: 50em;
   height: 30em;
   visibility: hidden;
+}
+
+#scoreBack:hover {
+  cursor: pointer;
 }
 
 body {

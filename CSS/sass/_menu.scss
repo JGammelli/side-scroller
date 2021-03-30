@@ -13,9 +13,27 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-
-
 }
 
+#start{
+    text-decoration: none;
+    color: $menuText;
+    a:link, a:visited{
+        color: $menuText;
+    }
+}
 
+#highscore{
+    color: $menuText;
+    :hover{
+        cursor: pointer;
+    }
+}
+
+#quit{
+    color: $menuText;
+    :hover{
+        cursor: pointer;
+    }
+}
 
