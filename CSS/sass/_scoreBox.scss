@@ -1,6 +1,6 @@
 @import "./variables";
 
-#menu{
+#scoreBox{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -9,13 +9,13 @@
     border-style: double;
     border-width: 10px;
     background-color: $menuColor;
-    width:10em;
     display: flex;
     flex-flow: column;
     align-items: center;
 
+    width: 50em;
+    height: 30em;
+
+    visibility: hidden;
 
 }
-
-
-
