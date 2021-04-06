@@ -1,7 +1,7 @@
 export function Highscore(){
     const scoreBtn = document.getElementById("highscore");
     const quitBtn = document.getElementById("quit");
-    const startBtn = document.getElementById("start")
+    
     const menuBox = document.getElementById("menu");
     const scoreBox = document.getElementById("scoreBox");
 
@@ -22,5 +22,15 @@ export function Highscore(){
 
     quitBtn.addEventListener("click", function(){
         window.close();
+    });
+
+    const startBtn = document.getElementById("start");
+    const playMode = document.getElementById("playMode");
+    const playTime = document.getElementById("playTime");
+
+    startBtn.addEventListener("click", function(){
+        playMode.style.visibility = "visible";
+        menuBox.style.visibility = "hidden";
+        playTime.style.visibility = "visible";
     });
 }

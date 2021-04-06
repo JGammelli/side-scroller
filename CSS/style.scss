@@ -2,7 +2,8 @@
 @import "./sass/variables";
 @import "./sass/play";
 @import "./sass/scoreBox";
+@import "./sass/gameHeader";
 
 body{
-    background-color: aqua;
+    background-image: $background;
 }

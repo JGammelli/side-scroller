@@ -7,16 +7,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Side-scroller</title>
 		<link rel="stylesheet" href="./CSS/style.css">
-        <script type="module" src="./Script/menu.js"></script>
-
+        <script type="module" src="../Script/script.js"></script>
     </head>
     <header>
+
+        <div id="playTime">
+            <div id="time"></div>
+        </div>
 
     </header>
     <body>
         <div id="menu">
-            <div>
-                <h1><a href="./HTML/playMode.html" id="start">Start</a></h1>
+            <div id="start">
+                <h1>Start</a></h1>
             </div>
             <div id="highscore">
                 <h1>Highscore</h1>
@@ -29,6 +32,12 @@
         <div id = scoreBox>
             <p id = "scoreBack">Back</p>
             <h1>Highscore</h1>
+        </div>
+
+
+        <div id = "playMode">
+            <div id="player"></div>
+            <div id="enemy"></div>
         </div>
 
     </body>

@@ -7,7 +7,7 @@
   border-radius: 10px;
   border-style: double;
   border-width: 10px;
-  background-color: #ff8a2b;
+  background-color: #ff2b2b;
   width: 10em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,8 +26,8 @@
   color: black;
 }
 
-#start a:link, #start a:visited {
-  color: black;
+#start :hover {
+  cursor: pointer;
 }
 
 #highscore {
@@ -46,6 +46,69 @@
   cursor: pointer;
 }
 
+#playMode {
+  width: 1800px;
+  height: 600px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid black;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+}
+
+#player {
+  background-image: url(../../Images/player.png);
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 550px;
+}
+
+.jump {
+  -webkit-animation: jump 0.3s linear;
+          animation: jump 0.3s linear;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    top: 550px;
+  }
+  30% {
+    top: 530px;
+  }
+  50% {
+    top: 480px;
+  }
+  80% {
+    top: 530px;
+  }
+  100% {
+    top: 550px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: 550px;
+  }
+  30% {
+    top: 530px;
+  }
+  50% {
+    top: 480px;
+  }
+  80% {
+    top: 530px;
+  }
+  100% {
+    top: 550px;
+  }
+}
+
 #scoreBox {
   position: fixed;
   top: 50%;
@@ -55,7 +118,7 @@
   border-radius: 10px;
   border-style: double;
   border-width: 10px;
-  background-color: #ff8a2b;
+  background-color: #ff2b2b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +138,15 @@
   cursor: pointer;
 }
 
+#playTime {
+  visibility: hidden;
+}
+
+#time {
+  color: black;
+}
+
 body {
-  background-color: aqua;
+  background-image: url(../../Images/background.png);
 }
 /*# sourceMappingURL=style.css.map */

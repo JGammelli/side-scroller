@@ -1,4 +1,5 @@
 export function Start(){
+    
     let player = document.getElementById("player");
     let counter = 0;
     let bottom = 0;
@@ -11,18 +12,18 @@ export function Start(){
     let timeBox = document.getElementById("time");
     
     function startGame(){
-        let lifeTime = 200;
+        let lifeTime = 201;
     
         setInterval(function(){
-            
+            console.log(lifeTime);
             lifeTime --;
             timeBox.innerHTML = "<p>" + "Time: " + lifeTime + "</p>";
         }, 1000); 
     
-    console.log("hello!");
-        
-        
+        console.log("hello!");
     }
+    startGame();
+
     
     function enemyMove(){
         lifeTime = 0;
@@ -42,28 +43,17 @@ export function Start(){
         }, 50); 
     }
     
-    function goUp(){
-        if(counter == 0){
-            let timer = setInterval(function(){
-                counter++;
-                bottom += 10;
-                console.log(bottom);
-                player.style.bottom = bottom + "px";
-                if (counter == 5){
-                    console.log(counter);
-                    clearInterval(timer)
-                    let timerDown = setInterval(function(){
-                        if(bottom == 0) {clearInterval(timerDown)}
-                        bottom -= 10;
-                        player.style.bottom = bottom + "px";
-                    }, 50);
-                    counter = 0;
-                    console.log(bottom);
-                }
-            }, 50);
-            console.log(counter);
+    function jump(){
+        if(player.classList != "jump"){
+            player.classList.add("jump");
+
+            setTimeout(() => {
+                player.classList.remove("jump");
+            }, 300);
         }
     }
+
+
     
     function walkLeft(){
         right -= 5;
@@ -107,8 +97,10 @@ export function Start(){
                 player.classList.add("keyLeft");
                 walkLeft();
             break;
+
+            case "space":
+                jump();
+            break;
         }
     });
-    
-    startGame();
 }
