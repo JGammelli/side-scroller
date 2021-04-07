@@ -34,16 +34,36 @@
         top: 550px;
     }
     30%{
-        top: 530px;
+        top: 500px;
     }
     50%{
-        top: 480px;
+        top: 450px;
     }
     80%{
-        top: 530px;
+        top: 500px;
     }
     100%{
         top: 550px;
+    }
+}
+
+#enemy{
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: 510px;
+    left: 1780px;
+    background-color: black;
+
+    animation: block 5s infinite linear;
+}
+
+@keyframes block{
+    0%{
+        left: 1780px;
+    }
+    100%{
+        left: -20px;
     }
 }
 

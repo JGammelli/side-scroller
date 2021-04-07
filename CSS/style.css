@@ -78,13 +78,13 @@
     top: 550px;
   }
   30% {
-    top: 530px;
+    top: 500px;
   }
   50% {
-    top: 480px;
+    top: 450px;
   }
   80% {
-    top: 530px;
+    top: 500px;
   }
   100% {
     top: 550px;
@@ -96,16 +96,45 @@
     top: 550px;
   }
   30% {
-    top: 530px;
+    top: 500px;
   }
   50% {
-    top: 480px;
+    top: 450px;
   }
   80% {
-    top: 530px;
+    top: 500px;
   }
   100% {
     top: 550px;
+  }
+}
+
+#enemy {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 510px;
+  left: 1780px;
+  background-color: black;
+  -webkit-animation: block 5s infinite linear;
+          animation: block 5s infinite linear;
+}
+
+@-webkit-keyframes block {
+  0% {
+    left: 1780px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+@keyframes block {
+  0% {
+    left: 1780px;
+  }
+  100% {
+    left: -20px;
   }
 }
 

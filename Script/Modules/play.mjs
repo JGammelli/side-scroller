@@ -15,7 +15,7 @@ export function Start(){
         let lifeTime = 201;
     
         setInterval(function(){
-            console.log(lifeTime);
+            //console.log(lifeTime);
             lifeTime --;
             timeBox.innerHTML = "<p>" + "Time: " + lifeTime + "</p>";
         }, 1000); 
@@ -25,23 +25,23 @@ export function Start(){
     startGame();
 
     
-    function enemyMove(){
-        lifeTime = 0;
-        let timer = setInterval(function(){
-                counter++;
-                moveRight += 10;
-                enemy.style.left = moveRight + "px";
-                if (counter == 10){
-                    clearInterval(timer)
-                    let timerDown = setInterval(function(){
-                        if(moveRight == 0) {clearInterval(timerDown)}
-                        moveRight -= 10;
-                        enemy.style.left = moveRight + "px";
-                    }, 50);
-                counter = 0;                
-                }
-        }, 50); 
-    }
+    // function enemyMove(){
+    //     lifeTime = 0;
+    //     let timer = setInterval(function(){
+    //             counter++;
+    //             moveRight += 10;
+    //             enemy.style.left = moveRight + "px";
+    //             if (counter == 10){
+    //                 clearInterval(timer)
+    //                 let timerDown = setInterval(function(){
+    //                     if(moveRight == 0) {clearInterval(timerDown)}
+    //                     moveRight -= 10;
+    //                     enemy.style.left = moveRight + "px";
+    //                 }, 50);
+    //             counter = 0;                
+    //             }
+    //     }, 50); 
+    // }
     
     function jump(){
         if(player.classList != "jump"){
@@ -67,13 +67,13 @@ export function Start(){
     
     document.addEventListener("keydown", function(evt){
         switch(evt.key){
-            case "ArrowUp":
-                player.classList.add("keyUp");
-                player.classList.remove("keyDown");
-                player.classList.remove("keyRight");
-                player.classList.remove("keyLeft");
-                goUp();
-            break;
+            // case "ArrowUp":
+            //     player.classList.add("keyUp");
+            //     player.classList.remove("keyDown");
+            //     player.classList.remove("keyRight");
+            //     player.classList.remove("keyLeft");
+            //     goUp();
+            // break;
     
             case "ArrowDown":
                 player.classList.remove("keyUp");
@@ -98,9 +98,32 @@ export function Start(){
                 walkLeft();
             break;
 
-            case "space":
-                jump();
-            break;
+
         }
+        if(evt.keyCode === 32){
+            jump();
+        }
+        
     });
+
+
+
+
+
+    let isAlive = setInterval(function(){
+        // get player y position
+        let playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
+        //console.log(playerTop);
+
+        // get enemy x position 
+        let enemyLeft = parseInt(window.getComputedStyle(enemy).getPropertyValue("left"));
+        //console.log(enemyLeft);
+
+
+        //detect collisioon
+        if(enemyLeft < 50 && enemyLeft > 0 && playerTop >= 550){
+            alert("Game over!")
+        }
+
+    }, 10);
 }
